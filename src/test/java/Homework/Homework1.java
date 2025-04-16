@@ -1,13 +1,12 @@
 package Homework;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import phoneBook.model.Contact;
 import phoneBook.utils.MyDataProvider;
-
 import static Phonebook.core.TestBase.app;
 
-public class Homework1 extends TestDataBese {
+public class Homework1 {
+
 
     @Test(dataProvider = "RegisteruserCsv", dataProviderClass = MyDataProvider.class)
     public void addCOntactFromDataProviderCsvFileTest(Contact contact) {
@@ -16,7 +15,9 @@ public class Homework1 extends TestDataBese {
         Assert.assertTrue(app.getContactHelper().isContactAdded(contact.getName()));
 
     }
+
 }
+
 
 
 

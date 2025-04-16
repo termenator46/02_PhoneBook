@@ -3,6 +3,21 @@ package phoneBook.model;
 public class User {
      private  String email;
     private  String password;
+    private  String connfirmPassword;
+    private  String FirstName;
+    private String lastName;
+
+    public String getConnfirmPassword() {
+        return connfirmPassword;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFirstName() {
+        return FirstName;
+    }
 
     public String getEmail() {
         return email;

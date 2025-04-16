@@ -1,12 +1,22 @@
 package Phonebook.test;
 
 import Phonebook.core.TestBase;
+import org.testng.annotations.BeforeMethod;
 import phoneBook.model.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import phoneBook.utils.MyDataProvider;
 
 public class LoginTest extends TestBase {
+
+    @BeforeMethod
+    public void precondishon() {
+        if (!app.getUserHelper().isLoginLinkPresent()) {
+            app.getUserHelper().clickOnSignOutButton();
+        }
+    }
+
+
     @Test
     public void loginExistedUserPositiveTest() {
         app.getUserHelper().login("portishead@gmail.com", "Password@1");
@@ -54,6 +64,7 @@ public class LoginTest extends TestBase {
                 .setEmail("portishead@gmail.com")
         );
         Assert.assertTrue(app.getContactHelper().isAlertPresent());
-    }}
+    }
+}
 
 
