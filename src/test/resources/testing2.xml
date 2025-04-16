@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Quick1" verbose="1">
+    <test name="Navigate">
+        <classes>
+            <class name="Phonebook.test.HomePageTest"/>
+        </classes>
+    </test>
+</suite>

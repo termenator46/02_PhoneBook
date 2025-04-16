@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoky" verbose="1">
+    <test name="Features">
+        <classes>
+            <class name="Phonebook.test.HomePageTest"/>
+            <class name="Phonebook.test.LoginTest">
+                <methods>
+                    <exclude name=".*Negative">
+
+                    </exclude>
+                </methods>
+            </class>
+            <class name="Phonebook.test.AddContactTEst">
+                <methods>
+                    <include name=".*Positive">
+
+                    </include>
+                </methods>
+            </class>
+            <class name="Phonebook.test.DeleteContactsTests">
+                <methods>
+                    <include name=".*Positive">
+
+                    </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
